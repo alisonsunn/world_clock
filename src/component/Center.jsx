@@ -10,7 +10,7 @@ const StyledCenter = styled.div`
   z-index: 999;
 `
 function Center(props) {
-  const {light} = props;
+  const {$light} = props;
   return (
     <StyledCenter
       $size="15px"
@@ -18,7 +18,7 @@ function Center(props) {
       $bg_white="#fff"
       $border_white="2px solid #fff"
       $border_black="2px solid #848484"
-      $light={light}
+      $light={$light}
     ></StyledCenter>
   )
 }
