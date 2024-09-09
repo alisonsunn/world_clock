@@ -4,6 +4,7 @@ import { useState } from 'react';
 import City from './City';
 import Time from './Time';
 import Pointer from './Pointer';
+import Center from './Center';
 
 const StyledClock = styled.div`
   width: ${props => props.width || '200px'};
@@ -65,7 +66,9 @@ function Clock(props) {
   return (
     <StyledClock width={"40rem"} $light={light} >
       <City light={light} city={city} >{city}</City>
-      <Pointer light={light} />
+      <Pointer light={light} >
+        <Center light={light}>Center</Center>
+      </Pointer>
       <Time light={light} timezone={timeZone}>
         {year}-{month}-{day} {hour}:{minute}:{second}
       </Time>
